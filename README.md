@@ -1,7 +1,6 @@
 # sandbox
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+Sandbox for fast iteration on tests separate from any business Ember application.
 
 ## Prerequisites
 
@@ -11,6 +10,8 @@ You will need the following things properly installed on your computer.
 * [Node.js](https://nodejs.org/) (with npm)
 * [Ember CLI](https://ember-cli.com/)
 * [Google Chrome](https://google.com/chrome/)
+
+npm version 16.16.0.
 
 ## Installation
 
