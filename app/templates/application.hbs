@@ -1,5 +1,68 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-<WelcomePage />
-{{!-- Feel free to remove this! --}}
+{{!-- <button onclick={{this.addABox}}>Add a box</button> --}}
 
-{{outlet}}
+{{!-- {{#each this.boxes as |box|}}
+    <Box @number={{box.number}} @junk={{box.junk}}></Box>
+{{/each}} --}}
+
+{{!-- <Box @number={{this.getTrackedVariable}}><button type="button" {{on 'click' this.onIncrease}}>Increase</button></Box> --}}
+
+<div>
+    <textarea>{{this.content}}</textarea>
+</div>
+<p>Length: {{this.content.length}}</p>
+
+<div>
+    <input type="text" value={{this.inputContent}} />
+</div>
+<p>Value: {{this.inputContent}}</p>
+<p>Length: {{this.inputContent.length}}</p>
+
+<div class="outer">
+     <div class="inner">a asldkfja;l flasd falskjd f;sld</div>
+</div>
+
+<div class="application">
+    <div class="menu">
+        <h2>Menus {{this.currentRoute}}</h2>
+
+        <div noclass="active-section-{{this.currentRoute}}"></div>
+        {{#each this.menuData as |menu|}}
+        <ul class="section {{menu.route}}-section">
+            {{#if menu.id}}
+                <LinkTo @current-when={{menu.route}} @route={{menu.route}} @tagName="li" @model={{menu.id}}>{{menu.section}}</LinkTo>
+            {{else}}
+                <LinkTo @current-when={{menu.route}} @route={{menu.route}} @tagName="li">{{menu.section}}</LinkTo>
+            {{/if}}
+            {{!-- @model={{menu.section}}  --}}
+            <ul>
+                {{#each menu.items as |item|}}
+                {{menu.route}}.{{item}}
+                    <LinkTo class="item" @route="{{menu.route}}.{{item}}" @tagName="li" >{{item}} ({{menu.section}})</LinkTo>
+                {{/each}}
+            </ul>
+        </ul>
+        {{/each}}
+
+        <LinkTo @route='cars' @query={{hash car=null}} @replace={{true}}>Cars in General</LinkTo>
+        <ul>
+            <li>
+                <LinkTo @route='cars' @query={{hash car="astra"}}>Astra</LinkTo>
+            </li>
+            <li>
+                <LinkTo @route='cars' @query={{hash car="beetle"}}>Beetle</LinkTo>
+            </li>
+            <li>
+                <LinkTo @route='cars' @query={{hash car="pulsar"}}>Pulsar</LinkTo>
+            </li>
+        </ul>
+
+
+    </div>
+
+    <div class="content">
+        <p>Now for other things.</p>
+
+        {{outlet}}
+    </div>
+</div>
+

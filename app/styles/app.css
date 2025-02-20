@@ -1,0 +1,89 @@
+.box {
+    border: 4px dashed blue;
+    background-color: #EEEEFF;
+    margin: 10px;
+    padding: 5px;
+    width: 200px;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.outer {
+    border: 4px solid blue;
+    margin: 10px;
+    width: 200px;
+    height: 300px;
+}
+
+.inner {
+    border: 4px solid red;
+    width: 200px;
+    height: inherit;
+}
+
+
+textarea {
+    width: 100%;
+    margin: 10px;
+}
+
+ul.section > li.active {
+    background-color: green;
+    color: white;
+    border-radius: 2px;
+}
+
+ul.section > li.active + ul .active {
+    background-color: purple;
+    color: white;
+    border-radius: 2px;
+}
+
+li {
+    cursor: pointer;
+    width: 200px;
+    padding: 5px;
+    list-style: none;
+}
+
+li + ul li {
+    padding-left: 40px;
+}
+
+li:hover {
+    background-color: goldenrod;
+}
+
+ul {
+    padding-left: 0;
+}
+
+.section ul {
+    /* display: none; */
+}
+
+.application {
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+    display: flex;
+}
+
+.menu {
+    background-color: #FFEE88;
+    padding: 10px;
+    width: 300px;
+}
+
+.content {
+    padding: 10px;
+}
+
+.section > li.active + ul {
+    display: block;
+}
+
+.section > li + ul {
+    display: none;
+}

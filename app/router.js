@@ -7,4 +7,23 @@ export default class Router extends EmberRouter {
 }
 
 Router.map(function() {
+  this.route('apples', function(){
+    this.route('red');
+    this.route('orange');
+    this.route('green');
+  });
+
+  this.route('apples-personal', { path: '/apples/:id' }, function(){
+    this.route('red');
+    this.route('orange');
+    this.route('green');  
+  });
+
+  this.route('cars');
+  // , function(){
+  //   this.route('astra');
+  //   this.route('mazda');
+  //   this.route('vw');
+  // });
+
 });
