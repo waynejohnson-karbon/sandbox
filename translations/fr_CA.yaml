@@ -1,5 +1,0 @@
-hello-only-from-us-file:
-  world: 'Uniquement le fichier Hello des États-Unis. Toutes les autres régions doivent l''utiliser.'
-hello:
-  world: 'Bonjour le monde US !'
-price_banner: 'Le {product} coûte {price, number}'

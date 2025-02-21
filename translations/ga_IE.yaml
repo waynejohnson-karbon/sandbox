@@ -1,5 +1,0 @@
-hello-only-from-us-file:
-  world: 'Dia duit amháin ón gcomhad SAM. Caithfidh gach réigiún eile é seo a úsáid.'
-hello:
-  world: 'Dia duit ar domhan SAM!'
-price_banner: 'Cosnaíonn an {product} {price, number}'
