@@ -11,7 +11,7 @@ jobs:
         run: |
           curl --request POST \
            --url https://api.lokalise.com/upload/github/66835468677f4447c39f72.08805740/files/download \
-           --header 'X-Api-Token: ${{ 9a3e67865165497b80ce5b775ae648bc }}' \
+           --header 'X-Api-Token: ${{ secrets.LOKALISE_KEY }}' \
            --header 'accept: application/json' \
            --header 'content-type: application/json' \
            --data '
