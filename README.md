@@ -11,7 +11,7 @@ You will need the following things properly installed on your computer.
 * [Ember CLI](https://ember-cli.com/)
 * [Google Chrome](https://google.com/chrome/)
 
-npm version 16.16.0.
+npm version 20.18.0.
 
 ## Installation
 
