@@ -3,3 +3,6 @@ hello:
   world: Hello world US!
 hello-only-from-us-file:
   world: Only Hello from the US file. All other regions have to use this.
+lotsOfDynamics: >-
+        Person has {nameEndsWithAnS, select, false {{Name}’s} other {{name}’}} other {assignedItemCount, plural, one
+        {item} other {items}} in this {work,select, other {work template} false {work}}.
