@@ -1,0 +1,22 @@
+hello-only-from-us-file:
+  world: 'Dia duit amháin ón gcomhad SAM. Caithfidh gach réigiún eile é seo a úsáid.'
+hello:
+  world: 'Dia duit ar domhan SAM!'
+lotsOfDynamics: 'Tá {nameEndsWithAnS, select, false {{Name} } other {{name} '' }} eile {assignedItemCount, plural, one { item } other { míreanna }} san {work,select, other { work template } false { work }}.'
+noQuotesWantedH: 'Ba mhaith le H roinnt {word} a thaispeáint mar is gnách.'
+only-here: tá
+price_banner: 'Cosnaíonn an {product} {price, number}'
+question: 'An ceist í seo?'
+quotesDouble: 'Is "sleachta dúbailte" iad seo. " {variable} ".'
+quotesDoubleCurly: 'Is “sleachta cuartha dúbailte” iad seo. “ {variable} ”.'
+quotesSingle: 'Is ‘sleachta aonair’ iad seo. ‘{ athróg}’.'
+quotesSingleCurly: 'Is ‘sleachta cuartha aonair’ iad seo. '' {variable} ''.'
+quotesWantedA: 'Ba mhaith le A roinnt ''{word}'' a thaispeáint i Sleachta singil.'
+quotesWantedB: 'Ba mhaith le B roinnt ''{word}'' a thaispeáint i Sleachta singil.'
+quotesWantedC: 'Ba mhaith le C roinnt ''{word}'' a thaispeáint i Sleachta singil.'
+quotesWantedD: 'Ba mhaith le D roinnt ''{word}'' a thaispeáint i Sleachta singil.'
+quotesWantedE: 'Ba mhaith le E roinnt ''{word}'' a thaispeáint i Sleachta singil.'
+quotesWantedF: 'Ba mhaith le F roinnt ''{''focal''}'' a thaispeáint i Sleachta aonair.'
+quotesWantedG: 'Ba mhaith le G roinnt '''' {word} '''' a thaispeáint i Sleachta aonair.'
+quotesWantedI: 'Ba mhaith liom roinnt ''{word}'' a thaispeáint i Sleachta aonair.'
+underscores: 'Mar sin, cad é an \_dealio\_ le \_ underscores\_?'
