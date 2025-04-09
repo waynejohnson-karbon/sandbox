@@ -26,7 +26,6 @@ jobs:
             --export-sort=a_z
             --replace-breaks=false
             --language-mapping=[{"original_language_iso":"en_US","custom_language_iso":"en-US"}]
-            --disable_references=false
             --plural_format=icu
             --placeholder_format=icu
             --icu_numeric=true
