@@ -17,9 +17,7 @@ jobs:
         with:
           api_token: ${{ secrets.LOKALISE_KEY }}
           project_id: "66835468677f4447c39f72.08805740"
-          base_lang: en
           file_format: yaml
-          skip_original_filenames: false
           translations_path: |
             "translations"
           additional_params: |
@@ -29,7 +27,7 @@ jobs:
             --replace-breaks=false
             --yaml-include-root=false
             --original-filenames=true
-            --directory-prefix=/
+            --directory-prefix="/"
             --all-platforms=true
             --include-comments=false
             --include-description=false
