@@ -19,13 +19,13 @@ jobs:
           project_id: "66835468677f4447c39f72.08805740"
           base_lang: en
           file_format: yaml
+          original_filenames: true
           additional_params: |
             --indentation=2sp
             --export-empty-as=empty
             --export-sort=a_z
             --replace-breaks=false
             --language-mapping=[{"original_language_iso":"en_US","custom_language_iso":"en-US"}]
-            --original_filenames=true
             --directory_prefix=/
             --all_platforms=true
             --export_sort": "a_z",
