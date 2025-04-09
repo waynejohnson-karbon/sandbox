@@ -26,6 +26,5 @@ jobs:
             --export-sort=a_z
             --replace-breaks=false
             --language-mapping=[{"original_language_iso":"en_US","custom_language_iso":"en-US"}]
-            --placeholder_format=icu
             --icu_numeric=true
             --yaml_include_root=false
