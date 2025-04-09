@@ -37,4 +37,4 @@ jobs:
             --disable-references=false
             --plural-format=icu
             --placeholder-format=icu
-            --icu_numeric=true
+            --icu-numeric=true
