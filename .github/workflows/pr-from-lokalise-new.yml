@@ -29,3 +29,12 @@ jobs:
             --replace-breaks=false
             --language-mapping=[{"original_language_iso":"en_US","custom_language_iso":"en-US"}]
             --yaml-include-root=false
+            --original-filenames=true
+            --directory-prefix=/
+            --all-platforms=true
+            --include-comments=false
+            --include-description=false
+            --disable-references=false
+            --plural-format=icu
+            --placeholder-format=icu
+            --icu_numeric=true
