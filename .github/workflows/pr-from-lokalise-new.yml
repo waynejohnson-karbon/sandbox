@@ -27,7 +27,6 @@ jobs:
             --export-sort=a_z
             --replace-breaks=false
             --language-mapping=[{"original_language_iso":"en_US","custom_language_iso":"en-US"}]
-            --export_sort": "a_z",
             --include_comments=false
             --include_description=false
             --disable_references=false
