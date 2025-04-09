@@ -20,6 +20,8 @@ jobs:
           base_lang: en
           file_format: yaml
           skip_original_filenames: false
+          translations_path: |
+            "translations"
           additional_params: |
             --indentation=2sp
             --export-empty-as=empty
