@@ -1,5 +1,23 @@
 hello-only-from-us-file:
-  world: 'Uniquement le fichier Hello des États-Unis. Toutes les autres régions doivent l''utiliser.'
+  world: "Uniquement pour le fichier «\_Hello\_» des États-Unis. Toutes les autres régions doivent l'utiliser."
 hello:
   world: 'Bonjour le monde US !'
+lotsOfDynamics: 'La personne a {nameEndsWithAnS, select, false {{Name} ''s } other {{name} '' }} autre {assignedItemCount, plural, one { élément } other { éléments }} dans ce {work,select, other { modèle de travail } false { travail }}.'
+newSinceAutoPull: 'Nouveau depuis l''extraction automatique'
+noQuotesWantedH: 'H aimerait montrer quelques {word} comme d''habitude.'
+only-here: Oui
 price_banner: 'Le {product} coûte {price, number}'
+question: 'Est-ce une question ?'
+quotesDouble: "Ce sont des «\_guillemets doubles\_». « {variable}\_»."
+quotesDoubleCurly: 'Ce sont des « guillemets doubles bouclés ». « {variable} ».'
+quotesSingle: "Ce sont des «\_guillemets simples\_». «\_{variable}\_»."
+quotesSingleCurly: "Ce sont des «\_guillemets bouclés simples\_». « {variable}\_»."
+quotesWantedA: 'A aimerait afficher quelques ''{word}'' entre guillemets simples.'
+quotesWantedB: 'B aimerait afficher quelques ''{word}'' entre guillemets simples.'
+quotesWantedC: 'C voudrait afficher quelques ''{word}'' entre guillemets simples.'
+quotesWantedD: 'D aimerait afficher quelques ''{word}'' entre guillemets simples.'
+quotesWantedE: 'E aimerait afficher quelques ''{word}'' entre guillemets simples.'
+quotesWantedF: 'F aimerait afficher quelques ''{''word''}'' entre guillemets simples.'
+quotesWantedG: 'G aimerait afficher quelques '''' {word} '''' entre guillemets simples.'
+quotesWantedI: 'Je voudrais afficher quelques ''{word}'' entre guillemets simples.'
+underscores: "Alors, quel est le \\_dealio\\_ avec les \\_ underscores\\_\_?"
