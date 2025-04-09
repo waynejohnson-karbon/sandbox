@@ -21,7 +21,6 @@ jobs:
           file_format: yaml
           skip_original_filenames: false
           additional_params: |
-            --all_platforms=true
             --indentation=2sp
             --export-empty-as=empty
             --export-sort=a_z
