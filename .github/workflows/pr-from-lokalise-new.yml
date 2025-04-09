@@ -1,0 +1,38 @@
+name: PR from Lokalise using lokalise-pull-action
+
+on: workflow_dispatch
+
+jobs:
+  lokalise:
+    if: github.ref == 'refs/heads/master'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: translation/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Pull from Lokalise
+        uses: lokalise/lokalise-pull-action@v3.8.0
+        with:
+          api_token: ${{ secrets.LOKALISE_KEY }}
+          project_id: "66835468677f4447c39f72.08805740"
+          base_lang: en
+          file_format: yaml
+          additional_params: |
+            --indentation=2sp
+            --export-empty-as=empty
+            --export-sort=a_z
+            --replace-breaks=false
+            --language-mapping=[{"original_language_iso":"en_US","custom_language_iso":"en-US"}]
+            --original_filenames=true
+            --directory_prefix=/
+            --all_platforms=true
+            --export_sort": "a_z",
+            --include_comments=false
+            --include_description=false
+            --disable_references=false
+            --plural_format=icu
+            --placeholder_format=icu
+            --icu_numeric=true
+            --yaml_include_root=false
