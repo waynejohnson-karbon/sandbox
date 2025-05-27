@@ -1,4 +1,4 @@
-curlyDrop: '{serviceName} is currently realized at {realizationRate}%, compared to {averageRate}% firm-wide'
+curlyDrop: '{serviceName} is currently realized at {realizationRate}%, compared to {averageRate}% firm-wide.'
 descriptionWithQuotes: 'Work templates for ''{serviceTypeName}''.'
 hello-only-from-us-file:
   world: 'Only Hello from the US file. All other regions have to use this.'
