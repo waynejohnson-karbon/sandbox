@@ -1,4 +1,4 @@
-curlyDrop: '{serviceName} is currently realized at {realizationRate}%, compared to {averageRate}% firm-wide.'
+curlyDrop: '{serviceName} is currently realized with AI at {realizationRate}%, compared to {averageRate}% firm-wide.'
 thisOneDoesntCrash: The fee was adjusted by {increase}% to {repricedAmount}.
 hello-only-from-us-file:
   world: 'Only Hello from the US file. All other regions have to use this.'
