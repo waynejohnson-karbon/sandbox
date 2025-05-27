@@ -1,3 +1,5 @@
+curlyDrop: '{serviceName} ay kasalukuyang naisasakatuparan sa {realizationRate} %, kumpara sa {averageRate} % firm-wide.'
+descriptionWithQuotes: 'Mga template ng trabaho para sa ''{serviceTypeName}''.'
 hello-only-from-us-file:
   world: 'Tanging Hello mula sa US file. Kailangang gamitin ito ng lahat ng iba pang rehiyon.'
 hello:
@@ -16,8 +18,9 @@ quotesWantedA: 'Gustong ipakita ni A ang ilang ''{word}'' sa mga solong panipi.'
 quotesWantedB: 'Gustong ipakita ni B ang ilang ''{word}'' sa mga solong panipi.'
 quotesWantedC: 'C ay gustong magpakita ng ilang ''{word}'' sa mga solong panipi.'
 quotesWantedD: 'Gustong ipakita ni D ang ilang ''{word}'' sa mga solong panipi.'
-quotesWantedE: 'Gustong ipakita ni E ang ilang ''{word}'' sa mga single quotes.'
+quotesWantedE: 'Gustong ipakita ni E ang ilang ''{word}'' sa mga solong panipi.'
 quotesWantedF: 'Gusto ni F na magpakita ng ilang ''{''word''}'' sa mga solong panipi.'
 quotesWantedG: 'Gustong ipakita ni G ang ilang '''' {word} '''' sa mga single quotes.'
 quotesWantedI: 'Gusto kong magpakita ng ilang ''{word}'' sa mga solong panipi.'
+thisOneDoesntCrash: 'Ang bayad ay inayos ng {increase} % sa {repricedAmount}.'
 underscores: 'Kaya ano ang \_dealio\_ na may \_ underscore\_?'

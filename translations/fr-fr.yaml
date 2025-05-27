@@ -1,3 +1,5 @@
+curlyDrop: "{serviceName} est actuellement réalisé à {realizationRate\_ %, par rapport à {averageRate}\_% à l'échelle de l'entreprise."
+descriptionWithQuotes: "Modèles de travail pour «\_{serviceTypeName}\_»."
 hello-only-from-us-file:
   world: "Uniquement pour le fichier «\_Hello\_» des États-Unis. Toutes les autres régions doivent l'utiliser."
 hello:
@@ -17,7 +19,8 @@ quotesWantedB: 'B aimerait afficher quelques ''{word}'' entre guillemets simples
 quotesWantedC: 'C voudrait afficher quelques ''{word}'' entre guillemets simples.'
 quotesWantedD: 'D aimerait afficher quelques ''{word}'' entre guillemets simples.'
 quotesWantedE: 'E aimerait afficher quelques ''{word}'' entre guillemets simples.'
-quotesWantedF: 'F aimerait afficher quelques ''{''word''}'' entre guillemets simples.'
+quotesWantedF: 'F aimerait afficher quelques ''{''mot''}'' entre guillemets simples.'
 quotesWantedG: 'G aimerait afficher quelques '''' {word} '''' entre guillemets simples.'
 quotesWantedI: 'Je voudrais afficher quelques ''{word}'' entre guillemets simples.'
+thisOneDoesntCrash: "Les frais ont été ajustés de {increase}\_% à {repricedAmount}."
 underscores: "Alors, quel est le \\_dealio\\_ avec les \\_ underscores\\_\_?"
