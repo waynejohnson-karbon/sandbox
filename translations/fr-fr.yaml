@@ -1,4 +1,4 @@
-curlyDrop: "{serviceName} est actuellement réalisé à {realizationRate\_ %, par rapport à {averageRate}\_% à l'échelle de l'entreprise."
+curlyDrop: "{serviceName} est actuellement réalisé à {realizationRate\_ %, par rapport à {averageRate}\_% à l'échelle de l'entreprise"
 descriptionWithQuotes: "Modèles de travail pour «\_{serviceTypeName}\_»."
 hello-only-from-us-file:
   world: "Uniquement pour le fichier «\_Hello\_» des États-Unis. Toutes les autres régions doivent l'utiliser."
