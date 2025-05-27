@@ -3,7 +3,7 @@ newSinceAutoPull: New since auto pull
 question: Is this a question?
 underscores: So what is the \_dealio\_ with \_ underscores\_?
 quotesSingleCurly: These are ‘single curly quotes’. ‘{variable}’.
-quotesSingle: These are 'single quotes'. '{variable}'.
+quotesSingle: These are 'single quotes'.
 quotesDoubleCurly: These are “double curly quotes”. “{variable}”.
 quotesDouble: These are "double quotes". "{variable}".
 hello:
