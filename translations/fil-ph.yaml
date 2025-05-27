@@ -1,0 +1,23 @@
+hello-only-from-us-file:
+  world: 'Tanging Hello mula sa US file. Kailangang gamitin ito ng lahat ng iba pang rehiyon.'
+hello:
+  world: 'Hello mundo US!'
+lotsOfDynamics: 'Ang tao ay may {nameEndsWithAnS, select, false {{Name} ''s } other {{name} '' }} other {assignedItemCount, plural, one { item } other { items }} sa {work,select, other { work template } false { work }}.'
+newSinceAutoPull: 'Bago dahil auto pull'
+noQuotesWantedH: 'Gustong ipakita ni H ang ilang {word} ayon sa normal.'
+only-here: oo
+price_banner: 'Ang {product} ay nagkakahalaga ng {price, number}'
+question: 'Tanong ba ito?'
+quotesDouble: 'Ito ay "double quotes". " {variable} ".'
+quotesDoubleCurly: 'Ito ay "double curly quotes". “ {variable} ”.'
+quotesSingle: 'Ito ay mga ''single quotes''.'
+quotesSingleCurly: 'Ito ay mga ''single curly quotes''. '' {variable} ''.'
+quotesWantedA: 'Gustong ipakita ni A ang ilang ''{word}'' sa mga solong panipi.'
+quotesWantedB: 'Gustong ipakita ni B ang ilang ''{word}'' sa mga solong panipi.'
+quotesWantedC: 'C ay gustong magpakita ng ilang ''{word}'' sa mga solong panipi.'
+quotesWantedD: 'Gustong ipakita ni D ang ilang ''{word}'' sa mga solong panipi.'
+quotesWantedE: 'Gustong ipakita ni E ang ilang ''{word}'' sa mga single quotes.'
+quotesWantedF: 'Gusto ni F na magpakita ng ilang ''{''word''}'' sa mga solong panipi.'
+quotesWantedG: 'Gustong ipakita ni G ang ilang '''' {word} '''' sa mga single quotes.'
+quotesWantedI: 'Gusto kong magpakita ng ilang ''{word}'' sa mga solong panipi.'
+underscores: 'Kaya ano ang \_dealio\_ na may \_ underscore\_?'
