@@ -1,6 +1,5 @@
 curlyDrop: '{serviceName} is currently realized at {realizationRate}%, compared to {averageRate}% firm-wide.'
-descriptionWithQuotes: Work templates for ''{serviceTypeName}''.
-thisOneDoesntCrash: The fee was adjusted by {increase}% to {repricedAmount}.
+descriptionWithQuotes: 'Work templates for ''{serviceTypeName}''.'
 hello-only-from-us-file:
   world: 'Only Hello from the US file. All other regions have to use this.'
 hello:
@@ -23,4 +22,5 @@ quotesWantedE: 'E would like to show some ''{word}'' in single quotes.'
 quotesWantedF: 'F would like to show some ''{''word''}'' in single quotes.'
 quotesWantedG: 'G would like to show some ''''{word}'''' in single quotes.'
 quotesWantedI: 'I would like to show some ''{word}'' in single quotes.'
+thisOneDoesntCrash: 'The fee was adjusted by {increase}% to {repricedAmount}.'
 underscores: 'So what is the \_dealio\_ with \_ underscores\_?'
