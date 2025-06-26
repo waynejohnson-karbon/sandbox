@@ -19,5 +19,8 @@ jobs:
         with:
           node-version: '20.x'
 
+      - name: Install lokalise library
+        run: npx api install "@lokalise-devhub/v1.0#33p7k19mb7sgpzr"
+
       - name: Run test Node script
         run: node public/lokalise-test-script.js
