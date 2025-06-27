@@ -10,7 +10,7 @@ const processes = await lokaliseApi.queuedProcesses().list({
 
 const readyToCreatePR = processes.items[processes.items.length-1].type === 'file-import'
 
-console.log('ready To Create PR: ', readyToCreatePR);
+console.log('Ready To Create PR?: ', readyToCreatePR);
 if (readyToCreatePR){
   const process = await lokaliseApi.files().async_download('66835468677f4447c39f72.08805740',
     {
@@ -35,7 +35,7 @@ if (readyToCreatePR){
     }
   );
 
-const process_id = process.process_id;
+  console.log('Process complete. PR being created. Process details: ', process);
 
 } else {
   console.log('Already downloaded. No new content available to make a PR.');
