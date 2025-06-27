@@ -1,4 +1,4 @@
-ping: 2
+ping: 3
 curlyDrop: '{serviceName} is currently realized at {realizationRate}%, compared to {averageRate}% firm-wide.'
 descriptionWithQuotes: 'Work templates for ''{serviceTypeName}''.'
 hello-only-from-us-file:
