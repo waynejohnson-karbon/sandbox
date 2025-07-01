@@ -8,7 +8,7 @@ lotsOfDynamics: 'Ang tao ay may {nameEndsWithAnS, select, false {{Name} ''s } ot
 newSinceAutoPull: 'Bago mula nang awtomatikong pagkuha'
 noQuotesWantedH: 'Si H ay nais magpakita ng ilang {word} gaya ng karaniwan.'
 only-here: oo
-ping: 3
+ping: 5
 price_banner: 'Ang {product} ay nagkakahalaga ng {price, number}'
 question: 'Tanong ba ito?'
 quotesDouble: 'Ito ay \"double quotes\". \"{variable}\".'

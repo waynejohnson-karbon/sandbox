@@ -8,7 +8,7 @@ lotsOfDynamics: 'La personne a {nameEndsWithAnS, select, false {{Name} ''s } oth
 newSinceAutoPull: 'Nouveau depuis l''extraction automatique'
 noQuotesWantedH: 'H aimerait montrer quelques {word} comme d''habitude.'
 only-here: oui
-ping: 3
+ping: 5
 price_banner: 'Le {product} coûte {price, number}'
 question: 'Est-ce une question ?'
 quotesDouble: 'Ce sont des \"guillemets doubles\". \"{variable}\".'
