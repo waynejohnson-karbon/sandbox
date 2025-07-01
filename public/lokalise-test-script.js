@@ -3,7 +3,7 @@ import { LokaliseApi } from "@lokalise/node-api";
 const projectId = '66835468677f4447c39f72.08805740';
 
 const lokaliseApi = new LokaliseApi({
-  apiKey: '${{ secrets.LOKALISE_KEY }}'
+  apiKey: process.env.LOKALISE_KEY
 });
 
 const processes = await lokaliseApi.queuedProcesses().list({

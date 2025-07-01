@@ -25,3 +25,5 @@ jobs:
 
       - name: Run test Node script
         run: node public/lokalise-test-script.js
+        env:
+          LOKALISE_KEY: ${{ secrets.LOKALISE_KEY }}
