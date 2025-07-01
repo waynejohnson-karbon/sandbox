@@ -8,7 +8,7 @@ lotsOfDynamics: 'Person has {nameEndsWithAnS, select, false {{Name}''s} other {{
 newSinceAutoPull: 'New since auto pull'
 noQuotesWantedH: 'H would like to show some {word} as per normal.'
 only-here: 'yes'
-ping: 3
+ping: 4
 price_banner: 'The {product} costs {price, number}'
 question: 'Is this a question?'
 quotesDouble: 'These are \"double quotes\". \"{variable}\".'
