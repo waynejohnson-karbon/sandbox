@@ -1,18 +1,20 @@
 import { LokaliseApi } from "@lokalise/node-api";
 
+const projectId = '66835468677f4447c39f72.08805740';
+
 const lokaliseApi = new LokaliseApi({
-  apiKey: 'b56292353456ae5b0eb793dabb1f4cb7f73fa85b'
+  apiKey: '${{ secrets.LOKALISE_KEY }}'
 });
 
 const processes = await lokaliseApi.queuedProcesses().list({
-  project_id: '66835468677f4447c39f72.08805740',
+  project_id: projectId,
 });
 
 const readyToCreatePR = processes.items[processes.items.length-1].type === 'file-import'
 
 console.log('Ready To Create PR?: ', readyToCreatePR);
 if (readyToCreatePR){
-  const process = await lokaliseApi.files().async_download('66835468677f4447c39f72.08805740',
+  const process = await lokaliseApi.files().async_download(projectId,
     {
       format: 'yaml', 
       "original_filenames": true,
