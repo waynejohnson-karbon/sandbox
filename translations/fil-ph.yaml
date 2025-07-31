@@ -1,27 +1,27 @@
 curlyDrop: 'Ang {serviceName} ay kasalukuyang naisasakatuparan sa {realizationRate}%, kumpara sa {averageRate}% sa buong kumpanya.'
-descriptionWithQuotes: 'Mga template ng trabaho para sa ''{serviceTypeName}''.'
+descriptionWithQuotes: "Mga template ng trabaho para sa '{serviceTypeName}'."
 hello-only-from-us-file:
   world: 'Tanging "Hello" mula sa US file. Lahat ng ibang rehiyon ay kailangang gamitin ito.'
 hello:
   world: 'Kumusta mundo US!'
-lotsOfDynamics: 'Ang tao ay may {nameEndsWithAnS, select, false {{Name} ''s } other {{name} '' }} other {assignedItemCount, plural, one { item } other { items }} sa {work,select, other { work template } false { work }}.'
+lotsOfDynamics: "Ang tao ay may {nameEndsWithAnS, select, false {{Name} 's } other {{name} ' }} other {assignedItemCount, plural, one { item } other { items }} sa {work,select, other { work template } false { work }}."
 newSinceAutoPull: 'Bago mula nang awtomatikong pagkuha'
 noQuotesWantedH: 'Si H ay nais magpakita ng ilang {word} gaya ng karaniwan.'
 only-here: oo
-ping: 3
+ping: 6
 price_banner: 'Ang {product} ay nagkakahalaga ng {price, number}'
 question: 'Tanong ba ito?'
 quotesDouble: 'Ito ay \"double quotes\". \"{variable}\".'
 quotesDoubleCurly: 'Ito ang "double curly quotes". "{variable}".'
-quotesSingle: 'Ito ay mga ''single quotes''.'
-quotesSingleCurly: 'Ito ang ''mga single curly quotes''. ''{variable}''.'
-quotesWantedA: 'Gustong ipakita ni A ang ilang ''{word}'' na nasa single quotes.'
-quotesWantedB: 'Gustong ipakita ni B ang ilang ''{word}'' na nasa single quotes.'
-quotesWantedC: 'Gustong ipakita ni C ang ilang ''{word}'' sa loob ng single quotes.'
-quotesWantedD: 'Gustong ipakita ni D ang ilang ''{word}'' sa loob ng single quotes.'
-quotesWantedE: 'Gusto ni E na ipakita ang ilang ''{word}'' sa loob ng single quotes.'
-quotesWantedF: 'Gustong ipakita ni F ang ilang ''{''word''}'' sa loob ng single quotes.'
-quotesWantedG: 'Gusto ni G na magpakita ng ilang ''''{word}'''' sa single quotes.'
-quotesWantedI: 'Gusto kong ipakita ang ilang ''{word}'' na nasa single quotes.'
+quotesSingle: "Ito ay mga 'single quotes'."
+quotesSingleCurly: "Ito ang 'mga single curly quotes'. '{variable}'."
+quotesWantedA: "Gustong ipakita ni A ang ilang '{word}' na nasa single quotes."
+quotesWantedB: "Gustong ipakita ni B ang ilang '{word}' na nasa single quotes."
+quotesWantedC: "Gustong ipakita ni C ang ilang '{word}' sa loob ng single quotes."
+quotesWantedD: "Gustong ipakita ni D ang ilang '{word}' sa loob ng single quotes."
+quotesWantedE: "Gusto ni E na ipakita ang ilang '{word}' sa loob ng single quotes."
+quotesWantedF: "Gustong ipakita ni F ang ilang '{'word'}' sa loob ng single quotes."
+quotesWantedG: "Gusto ni G na magpakita ng ilang ''{word}'' sa single quotes."
+quotesWantedI: "Gusto kong ipakita ang ilang '{word}' na nasa single quotes."
 thisOneDoesntCrash: 'Ang bayad ay iniayon ng {increase}% tungo sa {repricedAmount}.'
 underscores: 'Kaya ano nga ba ang \_dealio\_ sa mga \_underscores\_?'
