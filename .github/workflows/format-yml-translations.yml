@@ -47,11 +47,11 @@ jobs:
         uses: tj-actions/verify-changed-files@6ed7632824d235029086612d4330d659005af687 # pin@v20
         id: verify-changed-files
         with:
-          files: 'translations/**/*.yml'
+          files: 'translations/*.yaml'
 
       - name: Commit and push changes
         if: steps.verify-changed-files.outputs.files_changed == 'true'
         run: |
-          git add translations/**/*.yml
+          git add translations/*.yaml
           git commit -m "style(translations): Format YAML translations"
           git push
