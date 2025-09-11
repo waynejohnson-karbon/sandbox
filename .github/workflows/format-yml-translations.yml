@@ -1,0 +1,57 @@
+name: Format YAML Translations
+
+on:
+  pull_request:
+    paths:
+      - 'translations/**/*.yml'
+    branches:
+      - 'develop'
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+  packages: read
+
+jobs:
+  sort-yaml:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # pin@v4
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+
+      - name: Setup git user
+        uses: fregante/setup-git-user@024bc0b8e177d7e77203b48dab6fb45666854b35 # pin@v2
+
+      - name: Setup node
+        uses: actions/setup-node@39370e3970a6d050c480ffad4ff0ed4d3fdee5af # pin@v4
+        with:
+          cache-dependency-path: './package-lock.json'
+          cache: 'npm'
+          node-version-file: .nvmrc
+          registry-url: 'https://npm.pkg.github.com'
+
+      - name: Install dependencies
+        run: npm install
+        env:
+          NODE_AUTH_TOKEN: ${{ github.token }}
+
+      - name: Format translations
+        run: npm run format-translations
+
+      - name: Verify changed files
+        uses: tj-actions/verify-changed-files@6ed7632824d235029086612d4330d659005af687 # pin@v20
+        id: verify-changed-files
+        with:
+          files: 'translations/**/*.yml'
+
+      - name: Commit and push changes
+        if: steps.verify-changed-files.outputs.files_changed == 'true'
+        run: |
+          git add translations/**/*.yml
+          git commit -m "style(translations): Format YAML translations"
+          git push
