@@ -43,7 +43,7 @@ jobs:
           running-workflow-name: 'auto-merge-lokalise'
 
       - name: Auto-merge PR
-        uses: pascalgn/merge-pr-action@c1b5fe588e68a4e04e4535e84d8020c3c84fa542 # pin@v0.15.0
+        uses: pascalgn/automerge-action@v0.16.4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           merge_method: squash
