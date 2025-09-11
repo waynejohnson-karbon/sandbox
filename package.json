@@ -13,6 +13,7 @@
   },
   "scripts": {
     "build": "ember build --environment=production",
+    "format-translations": "yaml-sort -w 120 -i translations/*.yaml && prettier -w translations/*.yaml",
     "lint": "npm-run-all --aggregate-output --continue-on-error --parallel lint:*",
     "lint:hbs": "ember-template-lint .",
     "lint:js": "eslint .",
@@ -51,7 +52,8 @@
     "eslint-plugin-node": "^11.1.0",
     "loader.js": "^4.7.0",
     "npm-run-all": "^4.1.5",
-    "qunit-dom": "^2.0.0"
+    "qunit-dom": "^2.0.0",
+    "yaml-sort": "^2.1.0"
   },
   "engines": {
     "node": "10.* || >= 12"

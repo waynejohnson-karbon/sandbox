@@ -1,27 +1,31 @@
-curlyDrop: '{serviceName} est actuellement réalisé à {realizationRate}%, comparativement à {averageRate}% à l''échelle de l''entreprise.'
-descriptionWithQuotes: 'Modèles de travail pour « {serviceTypeName} ».'
-hello-only-from-us-file:
-  world: 'Seulement Bonjour du fichier des États-Unis. Toutes les autres régions doivent utiliser celui-ci.'
+curlyDrop: >-
+  {serviceName} est actuellement réalisé à {realizationRate}%, comparativement à {averageRate}% à l'échelle de
+  l'entreprise.
+descriptionWithQuotes: Modèles de travail pour « {serviceTypeName} ».
 hello:
-  world: 'Bonjour monde US!'
-lotsOfDynamics: 'La personne a {nameEndsWithAnS, select, false {{Name} ''s } other {{name} '' }} autre {assignedItemCount, plural, one { élément } other { éléments }} dans ce {work,select, other { modèle de travail } false { travail }}.'
-newSinceAutoPull: 'Nouveau depuis l''extraction automatique'
-noQuotesWantedH: 'H aimerait montrer quelques {word} comme d''habitude.'
+  world: Bonjour monde US!
+hello-only-from-us-file:
+  world: Seulement Bonjour du fichier des États-Unis. Toutes les autres régions doivent utiliser celui-ci.
+lotsOfDynamics: >-
+  La personne a {nameEndsWithAnS, select, false {{Name} 's } other {{name} ' }} autre {assignedItemCount, plural, one {
+  élément } other { éléments }} dans ce {work,select, other { modèle de travail } false { travail }}.
+newSinceAutoPull: Nouveau depuis l'extraction automatique
+noQuotesWantedH: H aimerait montrer quelques {word} comme d'habitude.
 only-here: oui
 ping: 3
-price_banner: 'Le {product} coûte {price, number}'
-question: 'Est-ce une question?'
-quotesDouble: 'Ce sont des « guillemets ». \"{variable}\".'
-quotesDoubleCurly: 'Ce sont des « guillemets français ». « {variable} ».'
-quotesSingle: 'Ce sont des ''guillemets simples''.'
-quotesSingleCurly: 'Ce sont des ''guillemets simples''. ''{variable}''.'
-quotesWantedA: 'A aimerait montrer quelques ''{word}'' entre guillemets simples.'
-quotesWantedB: 'B aimerait montrer quelques ''{word}'' entre guillemets simples.'
-quotesWantedC: 'C aimerait montrer certains ''{word}'' entre guillemets simples.'
-quotesWantedD: 'D aimerait montrer certains ''{word}'' entre guillemets simples.'
-quotesWantedE: 'E aimerait montrer quelques ''{word}'' entre guillemets simples.'
-quotesWantedF: 'F aimerait montrer quelques ''{''mot''}'' entre guillemets simples.'
-quotesWantedG: 'G aimerait montrer quelques ''''{word}'''' entre guillemets simples.'
-quotesWantedI: 'J''aimerais montrer quelques ''{word}'' entre guillemets simples.'
-thisOneDoesntCrash: 'Les frais ont été ajustés de {increase}% à {repricedAmount}.'
-underscores: 'Alors c''est quoi le \\_dealio\\_ avec les \\_ traits de soulignement\\_?'
+price_banner: Le {product} coûte {price, number}
+question: Est-ce une question?
+quotesDouble: Ce sont des « guillemets ». \"{variable}\".
+quotesDoubleCurly: Ce sont des « guillemets français ». « {variable} ».
+quotesSingle: Ce sont des 'guillemets simples'.
+quotesSingleCurly: Ce sont des 'guillemets simples'. '{variable}'.
+quotesWantedA: A aimerait montrer quelques '{word}' entre guillemets simples.
+quotesWantedB: B aimerait montrer quelques '{word}' entre guillemets simples.
+quotesWantedC: C aimerait montrer certains '{word}' entre guillemets simples.
+quotesWantedD: D aimerait montrer certains '{word}' entre guillemets simples.
+quotesWantedE: E aimerait montrer quelques '{word}' entre guillemets simples.
+quotesWantedF: F aimerait montrer quelques '{'mot'}' entre guillemets simples.
+quotesWantedG: G aimerait montrer quelques ''{word}'' entre guillemets simples.
+quotesWantedI: J'aimerais montrer quelques '{word}' entre guillemets simples.
+thisOneDoesntCrash: Les frais ont été ajustés de {increase}% à {repricedAmount}.
+underscores: Alors c'est quoi le \\_dealio\\_ avec les \\_ traits de soulignement\\_?
