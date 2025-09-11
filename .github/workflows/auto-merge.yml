@@ -26,7 +26,7 @@ jobs:
           echo "This PR appears to be from Lokalise and will be auto-merged"
 
       - name: Wait for format-yml-translations workflow to complete
-        uses: lewagon/wait-on-check-action@e106e5c43784fdcb6b60dbb51c21b94e6da09f5d # pin@v1.3.4
+        uses: lewagon/wait-on-check-action@v1.4.0
         with:
           ref: ${{ github.event.pull_request.head.sha }}
           repo-token: ${{ secrets.GITHUB_TOKEN }}
@@ -35,7 +35,7 @@ jobs:
           check-name: 'sort-yaml'
 
       - name: Wait for all other checks to complete
-        uses: lewagon/wait-on-check-action@e106e5c43784fdcb6b60dbb51c21b94e6da09f5d # pin@v1.3.4
+        uses: lewagon/wait-on-check-action@v1.4.0
         with:
           ref: ${{ github.event.pull_request.head.sha }}
           repo-token: ${{ secrets.GITHUB_TOKEN }}
