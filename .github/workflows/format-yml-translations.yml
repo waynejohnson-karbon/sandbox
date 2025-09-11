@@ -3,7 +3,7 @@ name: Format YAML Translations
 on:
   pull_request:
     paths:
-      - 'translations/**/*.yml'
+      - 'translations/*.yml'
     branches:
       - 'master'
 
