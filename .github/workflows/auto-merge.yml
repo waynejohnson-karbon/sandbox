@@ -1,0 +1,54 @@
+name: Auto-merge MyLokalise PRs
+
+on:
+  pull_request:
+    types: [opened]
+    branches:
+      - 'master' #'develop' #my branch
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+  pull-requests: write
+  #checks: read  ??do I need this?
+
+jobs:
+  auto-merge-lokalise:
+    runs-on: ubuntu-latest
+    if: contains(github.event.pull_request.title, 'MyPR-Title') 
+    steps:
+      - name: Check if PR title contains - MyPR-Title
+        run: |
+          echo "PR title: ${{ github.event.pull_request.title }}"
+          echo "This PR appears to be from Lokalise and will be auto-merged"
+
+      - name: Wait for format-yml-translations workflow to complete
+        uses: lewagon/wait-on-check-action@e106e5c43784fdcb6b60dbb51c21b94e6da09f5d # pin@v1.3.4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          wait-interval: 30
+          running-workflow-name: 'auto-merge-lokalise'
+          check-name: 'sort-yaml'
+
+      - name: Wait for all other checks to complete
+        uses: lewagon/wait-on-check-action@e106e5c43784fdcb6b60dbb51c21b94e6da09f5d # pin@v1.3.4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          wait-interval: 30
+          running-workflow-name: 'auto-merge-lokalise'
+
+      - name: Auto-merge PR
+        uses: pascalgn/merge-pr-action@c1b5fe588e68a4e04e4535e84d8020c3c84fa542 # pin@v0.15.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          merge_method: squash
+          merge_commit_title: ${{ github.event.pull_request.title }}
+          merge_commit_message: |
+            ${{ github.event.pull_request.body }}
+            
+            Automatically merged MyLokalise translation update.
