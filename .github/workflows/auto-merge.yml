@@ -44,11 +44,10 @@ jobs:
 
       - name: Auto-merge PR
         uses: pascalgn/automerge-action@v0.16.4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          merge_method: squash
-          merge_commit_title: ${{ github.event.pull_request.title }}
-          merge_commit_message: |
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          MERGE_METHOD: "squash"
+          MERGE_COMMIT_MESSAGE: |
             ${{ github.event.pull_request.body }}
             
             Automatically merged MyLokalise translation update.
