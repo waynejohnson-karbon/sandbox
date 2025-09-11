@@ -25,6 +25,18 @@ jobs:
           echo "PR title: ${{ github.event.pull_request.title }}"
           echo "This PR appears to be from Lokalise and will be auto-merged"
 
+      - name: Add Lokalise label to PR
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            github.rest.issues.addLabels({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              labels: ['lokalise', 'automerge']
+            })
+
       - name: Wait for format-yml-translations workflow to complete
         uses: lewagon/wait-on-check-action@v1.4.0
         with:
@@ -46,6 +58,8 @@ jobs:
         uses: pascalgn/automerge-action@v0.16.4
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          LOG: "TRACE"
+          MERGE_REQUIRED_APPROVALS: "0"
           MERGE_LABELS: "automerge"
           MERGE_METHOD: "squash"
           MERGE_METHOD_LABEL_REQUIRED: "false"
