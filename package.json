@@ -13,7 +13,7 @@
   },
   "scripts": {
     "build": "ember build --environment=production",
-    "format-translations": "yaml-sort -w 120 -i translations/**/*.yml && prettier -w translations/**/*.yml",
+    "format-translations": "yaml-sort -w 120 -i translations/*.yaml && prettier -w translations/*.yaml",
     "lint": "npm-run-all --aggregate-output --continue-on-error --parallel lint:*",
     "lint:hbs": "ember-template-lint .",
     "lint:js": "eslint .",
