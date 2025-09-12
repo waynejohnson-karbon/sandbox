@@ -18,7 +18,7 @@ permissions:
 jobs:
   auto-merge-lokalise:
     runs-on: ubuntu-latest
-    if: contains(github.event.pull_request.title, 'MyPR-Title') 
+    if: "contains(github.event.pull_request.title, 'Lokalise: Translations update')"
     steps:
       - name: Check if PR title contains - MyPR-Title
         run: |
