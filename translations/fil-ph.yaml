@@ -1,27 +1,27 @@
 change: pagbabago
-curlyDrop: 'Ang {serviceName} ay kasalukuyang naisasakatuparan sa {realizationRate}%, kumpara sa {averageRate}% sa buong kumpanya.'
-descriptionWithQuotes: "Mga template ng trabaho para sa '{serviceTypeName}'."
-hello-only-from-us-file:
-  world: 'Tanging "Hello" mula sa US file. Lahat ng ibang rehiyon ay kailangang gamitin ito.'
+curlyDrop: Ang {serviceName} ay kasalukuyang naisasakatuparan sa {realizationRate}%, kumpara sa {averageRate}% sa buong kumpanya.
+descriptionWithQuotes: Mga template ng trabaho para sa '{serviceTypeName}'.
 hello:
-  world: 'Kumusta mundo US!'
-newSinceAutoPull: 'Bago mula nang awtomatikong pagkuha'
-noQuotesWantedH: 'Si H ay nais magpakita ng ilang {word} gaya ng karaniwan.'
+  world: Kumusta mundo US!
+hello-only-from-us-file:
+  world: Tanging "Hello" mula sa US file. Lahat ng ibang rehiyon ay kailangang gamitin ito.
+newSinceAutoPull: Bago mula nang awtomatikong pagkuha
+noQuotesWantedH: Si H ay nais magpakita ng ilang {word} gaya ng karaniwan.
 only-here: oo
-price_banner: 'Ang {product} ay nagkakahalaga ng {price, number}'
-question: 'Tanong ba ito?'
-quotesDouble: 'Ito ay \"double quotes\". \"{variable}\".'
-quotesDoubleCurly: 'Ito ang "double curly quotes". "{variable}".'
-quotesSingle: "Ito ay mga 'single quotes'."
-quotesSingleCurly: "Ito ang 'mga single curly quotes'. '{variable}'."
-quotesWantedA: "Gustong ipakita ni A ang ilang '{word}' na nasa single quotes."
-quotesWantedB: "Gustong ipakita ni B ang ilang '{word}' na nasa single quotes."
-quotesWantedC: "Gustong ipakita ni C ang ilang '{word}' sa loob ng single quotes."
-quotesWantedD: "Gustong ipakita ni D ang ilang '{word}' sa loob ng single quotes."
-quotesWantedE: "Gusto ni E na ipakita ang ilang '{word}' sa loob ng single quotes."
-quotesWantedF: "Gustong ipakita ni F ang ilang '{'word'}' sa loob ng single quotes."
-quotesWantedG: "Gustong ipakita ni G ang ilang '{word}' sa mga solong panipi."
-quotesWantedI: "Gusto kong ipakita ang ilang '{word}' na nasa single quotes."
-scripts: 'mga script'
-thisOneDoesntCrash: 'Ang bayad ay iniayon ng {increase}% tungo sa {repricedAmount}.'
-underscores: 'Kaya ano nga ba ang \_dealio\_ sa mga \_underscores\_?'
+price_banner: Ang {product} ay nagkakahalaga ng {price, number}
+question: Tanong ba ito?
+quotesDouble: Ito ay \"double quotes\". \"{variable}\".
+quotesDoubleCurly: Ito ang "double curly quotes". "{variable}".
+quotesSingle: Ito ay mga 'single quotes'.
+quotesSingleCurly: Ito ang 'mga single curly quotes'. '{variable}'.
+quotesWantedA: Gustong ipakita ni A ang ilang '{word}' na nasa single quotes.
+quotesWantedB: Gustong ipakita ni B ang ilang '{word}' na nasa single quotes.
+quotesWantedC: Gustong ipakita ni C ang ilang '{word}' sa loob ng single quotes.
+quotesWantedD: Gustong ipakita ni D ang ilang '{word}' sa loob ng single quotes.
+quotesWantedE: Gusto ni E na ipakita ang ilang '{word}' sa loob ng single quotes.
+quotesWantedF: Gustong ipakita ni F ang ilang '{'word'}' sa loob ng single quotes.
+quotesWantedG: Gustong ipakita ni G ang ilang '{word}' sa mga solong panipi.
+quotesWantedI: Gusto kong ipakita ang ilang '{word}' na nasa single quotes.
+scripts: mga script
+thisOneDoesntCrash: Ang bayad ay iniayon ng {increase}% tungo sa {repricedAmount}.
+underscores: Kaya ano nga ba ang \_dealio\_ sa mga \_underscores\_?
