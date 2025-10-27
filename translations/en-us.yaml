@@ -1,3 +1,4 @@
+change: change
 curlyDrop: "{serviceName} is currently realized at {realizationRate}%, compared to {averageRate}% firm-wide."
 descriptionWithQuotes: Work templates for '{serviceTypeName}'.
 hello:
