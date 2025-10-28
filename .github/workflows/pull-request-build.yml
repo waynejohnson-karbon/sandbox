@@ -40,6 +40,8 @@ jobs:
           echo "build_version=$build_version" >> "$GITHUB_OUTPUT"
 
   format-and-sort-yaml-translations:
+    name: Format translation PRs
+    needs: setup
     runs-on: ubuntu-latest
     if: "github.event.pull_request.title == 'Lokalise: Translations update'"
     steps:
