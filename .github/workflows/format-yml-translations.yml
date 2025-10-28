@@ -1,11 +1,11 @@
 name: Format YAML Translations
 
-on:
-  pull_request:
-    paths:
-      - 'translations/*.yaml'
-    branches:
-      - 'master'
+# on:
+#   pull_request:
+#     paths:
+#       - 'translations/*.yaml'
+#     branches:
+#       - 'master'
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
