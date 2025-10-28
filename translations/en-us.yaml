@@ -1,27 +1,27 @@
 change: changed
-curlyDrop: '{serviceName} is currently realized at {realizationRate}%, compared to {averageRate}% firm-wide.'
-descriptionWithQuotes: "Work templates for '{serviceTypeName}'."
-hello-only-from-us-file:
-  world: 'Only Hello from the US file. All other regions have to use this.'
+curlyDrop: "{serviceName} is currently realized at {realizationRate}%, compared to {averageRate}% firm-wide."
+descriptionWithQuotes: Work templates for '{serviceTypeName}'.
 hello:
-  world: 'Hello world US!'
-newSinceAutoPull: 'New since auto pull'
-noQuotesWantedH: 'H would like to show some {word} as per normal.'
-only-here: 'yes'
-price_banner: 'The {product} costs {price, number}'
-question: 'Is this a question?'
-quotesDouble: 'These are "double quotes". "{variable}".'
-quotesDoubleCurly: 'These are “double curly quotes”. “{variable}”.'
-quotesSingle: "These are 'single quotes'."
-quotesSingleCurly: 'These are ‘single curly quotes’. ‘{variable}’.'
-quotesWantedA: "A would like to show some '{word}' in single quotes."
-quotesWantedB: "B would like to show some '{word}' in single quotes."
-quotesWantedC: "C would like to show some '{word}' in single quotes."
-quotesWantedD: "D would like to show some '{word}' in single quotes."
-quotesWantedE: "E would like to show some '{word}' in single quotes."
-quotesWantedF: "F would like to show some '{'word'}' in single quotes."
-quotesWantedG: "G would like to show some '{word}' in single quotes."
-quotesWantedI: "I would like to show some '{word}' in single quotes."
+  world: Hello world US!
+hello-only-from-us-file:
+  world: Only Hello from the US file. All other regions have to use this.
+newSinceAutoPull: New since auto pull
+noQuotesWantedH: H would like to show some {word} as per normal.
+only-here: "yes"
+price_banner: The {product} costs {price, number}
+question: Is this a question?
+quotesDouble: These are "double quotes". "{variable}".
+quotesDoubleCurly: These are “double curly quotes”. “{variable}”.
+quotesSingle: These are 'single quotes'.
+quotesSingleCurly: These are ‘single curly quotes’. ‘{variable}’.
+quotesWantedA: A would like to show some '{word}' in single quotes.
+quotesWantedB: B would like to show some '{word}' in single quotes.
+quotesWantedC: C would like to show some '{word}' in single quotes.
+quotesWantedD: D would like to show some '{word}' in single quotes.
+quotesWantedE: E would like to show some '{word}' in single quotes.
+quotesWantedF: F would like to show some '{'word'}' in single quotes.
+quotesWantedG: G would like to show some '{word}' in single quotes.
+quotesWantedI: I would like to show some '{word}' in single quotes.
 scripts: scripts
-thisOneDoesntCrash: 'The fee was adjusted by {increase}% to {repricedAmount}.'
-underscores: 'So what is the \_dealio\_ with \_ underscores\_?'
+thisOneDoesntCrash: The fee was adjusted by {increase}% to {repricedAmount}.
+underscores: So what is the \_dealio\_ with \_ underscores\_?
