@@ -1,4 +1,4 @@
-change: changes
+change: changed
 curlyDrop: "{serviceName} is currently realised at {realizationRate}%, compared to {averageRate}% firm-wide."
 descriptionWithQuotes: Work templates for '{serviceTypeName}'.
 hello:
@@ -14,14 +14,14 @@ quotesDouble: These are \"double quotes\". \"{variable}\".
 quotesDoubleCurly: These are "double curly quotes". "{variable}".
 quotesSingle: These are ‘single quotes’.
 quotesSingleCurly: These are 'single curly quotes'. '{variable}'.
-quotesWantedA: A would like to show some '{word}' in single quotes.
-quotesWantedB: B would like to show some '{word}' in single quotes.
-quotesWantedC: C would like to show some '{word}' in single quotes.
-quotesWantedD: D would like to show some '{word}' in single quotes.
-quotesWantedE: E would like to show some '{word}' in single quotes.
-quotesWantedF: F would like to show some '{word}' in single quotes.
+quotesWantedA: A would like to show some ‘{word}’ in single quotes.
+quotesWantedB: B would like to show some ‘{word}’ in single quotes.
+quotesWantedC: C would like to show some ‘{word}’ in single quotes.
+quotesWantedD: D would like to show some ‘{word}’ in single quotes.
+quotesWantedE: E would like to show some ‘{word}’ in single quotes.
+quotesWantedF: F would like to show some ‘{word}’ in single quotes.
 quotesWantedG: G would like to show some '{word}' in single quotes.
-quotesWantedI: I would like to show some '{word}' in single quotes.
+quotesWantedI: I would like to show some ‘{word}’ in single quotes.
 scripts: scripts
 thisOneDoesntCrash: The fee was adjusted by {increase}% to {repricedAmount}.
 underscores: So what is the \_dealio\_ with \_underscores\_?

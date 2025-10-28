@@ -1,4 +1,4 @@
-change: pagbabago
+change: nagbago
 curlyDrop: Ang {serviceName} ay kasalukuyang naisasakatuparan sa {realizationRate}%, kumpara sa {averageRate}% sa buong kumpanya.
 descriptionWithQuotes: Mga template ng trabaho para sa '{serviceTypeName}'.
 hello:
@@ -13,7 +13,7 @@ question: Tanong ba ito?
 quotesDouble: Ito ay \"double quotes\". \"{variable}\".
 quotesDoubleCurly: Ito ang "double curly quotes". "{variable}".
 quotesSingle: Ito ay mga 'single quotes'.
-quotesSingleCurly: Ito ang 'mga single curly quotes'. '{variable}'.
+quotesSingleCurly: Ito ay mga 'single curly quotes'. '{variable}'.
 quotesWantedA: Gustong ipakita ni A ang ilang '{word}' na nasa single quotes.
 quotesWantedB: Gustong ipakita ni B ang ilang '{word}' na nasa single quotes.
 quotesWantedC: Gustong ipakita ni C ang ilang '{word}' sa loob ng single quotes.

@@ -1,8 +1,8 @@
-change: changements
+change: modifié
 curlyDrop: >-
   {serviceName} est actuellement réalisé à {realizationRate}%, comparativement à {averageRate}% à l'échelle de
   l'entreprise.
-descriptionWithQuotes: Modèles de travail pour '{serviceTypeName}'.
+descriptionWithQuotes: Modèles de travail pour « {serviceTypeName} ».
 hello:
   world: Bonjour monde US!
 hello-only-from-us-file:
@@ -15,7 +15,7 @@ question: Est-ce une question?
 quotesDouble: Ce sont des « guillemets ». \"{variable}\".
 quotesDoubleCurly: Ce sont des « guillemets français ». « {variable} ».
 quotesSingle: Ce sont des 'guillemets simples'.
-quotesSingleCurly: Ce sont des 'guillemets simples'. '{variable}'.
+quotesSingleCurly: "Ce sont des «\_guillemets bouclés simples\_». '{variable}'."
 quotesWantedA: A aimerait montrer quelques '{word}' entre guillemets simples.
 quotesWantedB: B aimerait montrer quelques '{word}' entre guillemets simples.
 quotesWantedC: C aimerait montrer certains '{word}' entre guillemets simples.
