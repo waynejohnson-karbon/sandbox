@@ -6,6 +6,7 @@ export default class SomewhereRoute extends Route {
 
     afterModel(model){
         let here = model;
+        console.log(here);
     }
 
 }

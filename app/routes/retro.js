@@ -6,11 +6,13 @@ export default class RetroRoute extends Route {
 
     beforeModel(model){
         let here = model;
+        console.log(here);
         console.log('Retro route triggered');
     }
 
     afterModel(model){
         let here = model;
+        console.log(here);
     }
 
 }
