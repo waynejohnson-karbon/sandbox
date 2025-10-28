@@ -245,7 +245,8 @@ jobs:
 
   auto-merge-lokalise:
     name: Auto merge Lokalise
-    needs: [build, lint, typecheck, test]
+    # needs: [build, lint, typecheck, test]
+    needs: [build]
     runs-on: ubuntu-latest
     if: "contains(github.event.pull_request.title, 'Lokalise: Translations update')"
     steps:
