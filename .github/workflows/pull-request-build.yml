@@ -14,6 +14,7 @@ env:
 permissions:
   contents: write
   packages: read
+  pull-requests: write
 
 jobs:
   setup:
@@ -241,6 +242,39 @@ jobs:
         uses: EnricoMi/publish-unit-test-result-action/linux@3a74b2957438d0b6e2e61d67b05318aa25c9e6c6 # v2
         with:
           files: 'test-results.xml'
+
+  auto-merge-lokalise:
+    name: Auto merge Lokalise
+    needs: [build, lint, typecheck, test]
+    runs-on: ubuntu-latest
+    if: "contains(github.event.pull_request.title, 'Lokalise: Translations update')"
+    steps:
+      - name: Add Lokalise label to PR
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            github.rest.issues.addLabels({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              labels: ['lokalise', 'automerge']
+            })
+
+      - name: Auto-merge PR
+        uses: pascalgn/automerge-action@v0.16.4
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          LOG: "TRACE"
+          MERGE_REQUIRED_APPROVALS: "0"
+          MERGE_LABELS: "automerge"
+          MERGE_METHOD: "squash"
+          MERGE_METHOD_LABEL_REQUIRED: "false"
+          MERGE_COMMIT_MESSAGE: |
+            ${{ github.event.pull_request.body }}
+            
+            Automatically merged MyLokalise translation update.
+
 
   # publish-azure:
   #   needs: [ setup, build, test, lint ]
