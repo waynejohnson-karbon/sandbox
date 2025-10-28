@@ -2,7 +2,7 @@ change: changements
 curlyDrop: >-
   {serviceName} est actuellement réalisé à {realizationRate}%, comparativement à {averageRate}% à l'échelle de
   l'entreprise.
-descriptionWithQuotes: Modèles de travail pour « {serviceTypeName} ».
+descriptionWithQuotes: Modèles de travail pour '{serviceTypeName}'.
 hello:
   world: Bonjour monde US!
 hello-only-from-us-file:

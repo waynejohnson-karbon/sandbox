@@ -10,7 +10,7 @@ export default class CarsRoute extends Route {
         }
     };
 
-    resetController(controller, isExiting, transition) {
+    resetController(controller, isExiting) {
         if (isExiting) {
             // isExiting would be false if only the route's model was changing
             controller.set('car', null);
@@ -23,6 +23,8 @@ export default class CarsRoute extends Route {
 
     afterModel(model){
         let here = model;
+        console.log(here);
+
     }
 
 }

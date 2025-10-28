@@ -1,8 +1,6 @@
 import Controller from '@ember/controller';
 import { tracked } from '@glimmer/tracking';
-import { action, computed } from '@ember/object';
-import { A } from '@ember/array';
-import ArrayProxy from '@ember/array/proxy';
+import { action } from '@ember/object';
 import { inject as service } from '@ember/service';
 
 export default class ApplicationController extends Controller {
@@ -62,9 +60,9 @@ export default class ApplicationController extends Controller {
         //     });
         // this.ap.addObject({number: 999, junk: Math.random()});
 
-        this.boxes.addObserver('junk', function() {
-            console.log('junk changed');
-        });
+        // this.boxes.addObserver('junk', function() {
+        //     console.log('junk changed');
+        // });
     }
 
     
@@ -97,7 +95,6 @@ export default class ApplicationController extends Controller {
         //this.boxes.push({number: this.boxes.length, junk: Math.random()});
     }
 
-    @computed('trackedVariable')
     get getTrackedVariable(){
         return this.trackedVariable;
     }
