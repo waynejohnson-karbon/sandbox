@@ -1,14 +1,14 @@
-curlyDrop: '{serviceName} is currently realised at {realizationRate}%, compared to {averageRate}% firm-wide.'
-hello-only-from-us-file:
-  world: 'Only Hello from the US file. All other regions have to use this.'
+curlyDrop: "{serviceName} is currently realised at {realizationRate}%, compared to {averageRate}% firm-wide."
 hello:
-  world: 'Hello world AU!'
-newSinceAutoPull: 'New since auto pull'
-only-here: 'yes'
-price_banner: 'The {product} costs {price, number}'
-question: 'Is this a question?'
-quotesDouble: 'These are \"double quotes\". \"{variable}\".'
-quotesDoubleCurly: 'These are "double curly quotes". "{variable}".'
-quotesSingle: 'These are ‘single quotes’.'
-thisOneDoesntCrash: 'The fee was adjusted by {increase}% to {repricedAmount}.'
-underscores: 'So what is the \_dealio\_ with \_underscores\_?'
+  world: Hello world AU!
+hello-only-from-us-file:
+  world: Only Hello from the US file. All other regions have to use this.
+newSinceAutoPull: New since auto pull
+only-here: "yes"
+price_banner: The {product} costs {price, number}
+question: Is this a question?
+quotesDouble: These are \"double quotes\". \"{variable}\".
+quotesDoubleCurly: These are "double curly quotes". "{variable}".
+quotesSingle: These are ‘single quotes’.
+thisOneDoesntCrash: The fee was adjusted by {increase}% to {repricedAmount}.
+underscores: So what is the \_dealio\_ with \_underscores\_?
