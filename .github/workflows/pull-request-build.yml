@@ -4,7 +4,7 @@ on:
 
 
 concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
+  group: "${{ github.workflow }}-${{ github.ref }}-${{ github.event.pull_request.title == 'Lokalise: Translations update' && github.run_id || 'default' }}"
   cancel-in-progress: true
 
 env:
