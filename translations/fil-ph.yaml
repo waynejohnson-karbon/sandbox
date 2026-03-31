@@ -9,6 +9,6 @@ price_banner: 'Ang {product} ay nagkakahalaga ng {price, number}'
 question: 'Tanong ba ito?'
 quotesDouble: 'Ito ay \"double quotes\". \"{variable}\".'
 quotesDoubleCurly: 'Ito ang "double curly quotes". "{variable}".'
-quotesSingle: 'Ito ay mga ''single quotes''.'
+quotesSingle: "Ito ay mga 'single quotes'."
 thisOneDoesntCrash: 'Ang bayad ay iniayon ng {increase}% tungo sa {repricedAmount}.'
 underscores: 'Kaya ano nga ba ang \_dealio\_ sa mga \_underscores\_?'
