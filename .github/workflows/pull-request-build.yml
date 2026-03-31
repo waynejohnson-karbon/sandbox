@@ -1,0 +1,305 @@
+name: PR build
+on:
+  pull_request:
+
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  BRANCH_NAME: ${{ github.head_ref || github.ref_name }}
+  PROJECT_NAME: AppFe
+
+permissions:
+  contents: write
+  packages: read
+  pull-requests: write
+
+jobs:
+  setup:
+    name: Setup
+    runs-on: ubuntu-latest
+
+    outputs:
+      branch: ${{ env.BRANCH_NAME }}
+      build_version: ${{ steps.set_build_version.outputs.build_version }}
+      safe_branch_name: ${{ steps.set_safe_branch_name.outputs.safe_branch_name }}
+
+    steps:
+      - uses: actions/checkout@08eba0b27e820071cde6df949e0beb9ba4906955 # v4
+        with:
+          ref: ${{ env.BRANCH_NAME }}
+
+      - name: Set safe branch name
+        id: set_safe_branch_name
+        run: |
+          safe_branch_name=$(echo ${{ env.BRANCH_NAME }} | tr / -)
+          echo "safe_branch_name=$safe_branch_name" >> "$GITHUB_OUTPUT"
+
+      - name: Set build version
+        id: set_build_version
+        run: |
+          build_version=${{ steps.set_safe_branch_name.outputs.safe_branch_name }}-${GITHUB_SHA:0:7}
+          echo "Build version: $build_version"
+          echo "build_version=$build_version" >> "$GITHUB_OUTPUT"
+
+  format-and-sort-yaml-translations:
+    name: Format translation PRs
+    needs: setup
+    runs-on: ubuntu-latest
+    if: "github.event.pull_request.title == 'Lokalise: Translations update'"
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # pin@v4
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+
+      - name: Setup git user
+        uses: fregante/setup-git-user@024bc0b8e177d7e77203b48dab6fb45666854b35 # pin@v2
+
+      - name: Setup node
+        uses: actions/setup-node@39370e3970a6d050c480ffad4ff0ed4d3fdee5af # pin@v4
+        with:
+          cache-dependency-path: './package-lock.json'
+          cache: 'npm'
+          node-version-file: .nvmrc
+          registry-url: 'https://npm.pkg.github.com'
+
+      - name: Install dependencies
+        run: npm install
+        env:
+          NODE_AUTH_TOKEN: ${{ github.token }}
+
+      - name: Format translations
+        run: npm run format-translations
+
+      - name: Verify changed files
+        uses: tj-actions/verify-changed-files@6ed7632824d235029086612d4330d659005af687 # pin@v20
+        id: verify-changed-files
+        with:
+          files: 'translations/*.yaml'
+
+      - name: Commit and push changes
+        if: steps.verify-changed-files.outputs.files_changed == 'true'
+        run: |
+          git add translations/*.yaml
+          git commit -m "style(translations): Format YAML translations"
+          git push
+
+  build:
+    name: Build app
+    needs: format-and-sort-yaml-translations
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@08eba0b27e820071cde6df949e0beb9ba4906955 # v4
+        with:
+          ref: ${{ env.BRANCH_NAME }}
+
+      - name: Setup node
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          cache-dependency-path: './package-lock.json'
+          cache: 'npm'
+          node-version-file: .nvmrc
+          registry-url: 'https://npm.pkg.github.com'
+
+      - uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830 # v4
+        id: npm-cache
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}-v2 # Increment version for cache refresh
+
+      - name: Install npm
+        # if: steps.npm-cache.outputs.cache-hit != 'true'
+        run: npm install
+        env:
+          NODE_AUTH_TOKEN: ${{ github.token }}
+
+      - name: Run build
+        run: npm run build
+
+      - name: Write version file
+        run: |
+          echo "{ \"app-fe\": \"${{ needs.setup.outputs.build_version }}\" }" > dist/version.json
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: fe-${{ needs.setup.outputs.build_version }}
+          path: dist
+
+  # lint:
+  #   name: Lint
+  #   needs: format-and-sort-yaml-translations
+  #   if: always()
+  #   runs-on: ubuntu-latest
+
+  #   steps:
+  #     - uses: actions/checkout@08eba0b27e820071cde6df949e0beb9ba4906955 # v4
+  #       with:
+  #         ref: ${{ env.BRANCH_NAME }}      
+
+  #     - name: Setup node
+  #       uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+  #       with:
+  #         cache-dependency-path: './package-lock.json'
+  #         cache: 'npm'
+  #         node-version-file: .nvmrc
+  #         registry-url: 'https://npm.pkg.github.com'
+
+  #     - uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830 # v4
+  #       id: npm-cache
+  #       with:
+  #         path: '**/node_modules'
+  #         key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+
+  #     - name: Install npm
+  #       if: steps.npm-cache.outputs.cache-hit != 'true'
+  #       run: npm install
+  #       env:
+  #         NODE_AUTH_TOKEN: ${{ github.token }}
+
+  #     - name: Run linting
+  #       id: lint
+  #       run: npm run lint
+
+  # typecheck:
+  #   name: Typecheck
+  #   needs: format-and-sort-yaml-translations
+  #   if: always()
+  #   runs-on: ubuntu-latest
+
+  #   steps:
+  #     - uses: actions/checkout@08eba0b27e820071cde6df949e0beb9ba4906955 # v4
+  #       with:
+  #         ref: ${{ env.BRANCH_NAME }}
+
+  #     - name: Setup node
+  #       uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+  #       with:
+  #         cache-dependency-path: './package-lock.json'
+  #         cache: 'npm'
+  #         node-version-file: .nvmrc
+  #         registry-url: 'https://npm.pkg.github.com'
+
+  #     - uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830 # v4
+  #       id: npm-cache
+  #       with:
+  #         path: '**/node_modules'
+  #         key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+
+  #     - name: Install npm
+  #       if: steps.npm-cache.outputs.cache-hit != 'true'
+  #       run: npm install
+  #       env:
+  #         NODE_AUTH_TOKEN: ${{ github.token }}
+
+  #     - name: Run type checking
+  #       run: npm run typecheck
+
+  #     - name: ESLint summary for files changed in this branch
+  #       if: failure() && steps.lint.conclusion == 'failure'
+  #       run: GITHUB_BASE_REF=${{ github.base_ref }} npm run eslint-diff
+
+  # test:
+  #   name: Test app
+  #   needs: format-and-sort-yaml-translations
+  #   if: always()
+  #   runs-on: ubuntu-latest
+
+  #   steps:
+  #     - uses: actions/checkout@08eba0b27e820071cde6df949e0beb9ba4906955 # v4
+  #       with:
+  #         ref: ${{ env.BRANCH_NAME }}
+
+  #     - name: Setup node
+  #       uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+  #       with:
+  #         cache-dependency-path: './package-lock.json'
+  #         cache: 'npm'
+  #         node-version-file: .nvmrc
+  #         registry-url: 'https://npm.pkg.github.com'
+
+  #     - uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830 # v4
+  #       id: npm-cache
+  #       with:
+  #         path: '**/node_modules'
+  #         key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}-v2
+
+  #     - name: Install npm
+  #       # if: steps.npm-cache.outputs.cache-hit != 'true'
+  #       run: npm install
+  #       env:
+  #         NODE_AUTH_TOKEN: ${{ github.token }}
+
+  #     - name: Run tests
+  #       run: npm run test-ci:ember
+
+  #     - name: Test summary
+  #       if: ${{ ! contains(github.head_ref, 'dependabot') }}
+  #       uses: EnricoMi/publish-unit-test-result-action/linux@3a74b2957438d0b6e2e61d67b05318aa25c9e6c6 # v2
+  #       with:
+  #         files: 'test-results.xml'
+
+  auto-merge-lokalise:
+    name: Auto merge Lokalise
+    # needs: [build, lint, typecheck, test]
+    needs: [build]
+    runs-on: ubuntu-latest
+    if: "contains(github.event.pull_request.title, 'Lokalise: Translations update')"
+    steps:
+      - name: Add Lokalise label to PR
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            github.rest.issues.addLabels({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              labels: ['lokalise', 'automerge']
+            })
+
+      - name: Auto-merge PR
+        uses: pascalgn/automerge-action@v0.16.4
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          LOG: "TRACE"
+          MERGE_REQUIRED_APPROVALS: "0"
+          MERGE_LABELS: "automerge"
+          MERGE_METHOD: "squash"
+          MERGE_METHOD_LABEL_REQUIRED: "false"
+          MERGE_COMMIT_MESSAGE: |
+            ${{ github.event.pull_request.body }}
+            
+            Automatically merged MyLokalise translation update.
+
+
+  # publish-azure:
+  #   needs: [ setup, build, test, lint ]
+  #   runs-on: ubuntu-latest
+  #   if: ${{ ! contains(github.head_ref, 'dependabot') }}
+  #   steps:
+  #     - uses: actions/checkout@08eba0b27e820071cde6df949e0beb9ba4906955 # v4
+  #       with:
+  #         ref: ${{ env.BRANCH_NAME }}
+
+  #     - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4
+  #       with:
+  #         name: fe-${{ needs.setup.outputs.build_version }}
+  #         path: ${{ env.PROJECT_NAME }}.Web
+
+  #     - name: Create IIS artifact
+  #       run: |
+  #         sudo cp Web.config ${{ env.PROJECT_NAME }}.Web/
+  #         sudo zip -r ${{ env.PROJECT_NAME }}-${{ needs.setup.outputs.build_version }}.zip ${{ env.PROJECT_NAME }}.Web
+  #       shell: bash
+
+  #     - name: Copy to storage account
+  #       run: |
+  #         echo '${{ needs.setup.outputs.safe_branch_name }}=${{ needs.setup.outputs.build_version }}' > ${{ needs.setup.outputs.safe_branch_name }}.version
+  #         az storage blob upload -c builds -f ${{ env.PROJECT_NAME }}-${{ needs.setup.outputs.build_version }}.zip -n ${{ env.PROJECT_NAME }}/${{ needs.setup.outputs.build_version }}/${{ env.PROJECT_NAME }}-dist-${{ needs.setup.outputs.build_version }}.zip --connection-string '${{ secrets.KARBONHQSOURCE_STORAGE_ACCOUNT_CONNECTIONSTRING }}' --overwrite=True          
+  #         az storage blob upload -c builds -f ${{ needs.setup.outputs.safe_branch_name }}.version -n ${{ env.PROJECT_NAME }}/${{ needs.setup.outputs.safe_branch_name }}.version --connection-string '${{ secrets.KARBONHQSOURCE_STORAGE_ACCOUNT_CONNECTIONSTRING }}' --overwrite=True
+  #       shell: bash

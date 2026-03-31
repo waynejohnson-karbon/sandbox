@@ -5,6 +5,7 @@ export default class SomewhereRoute extends Route {
     @service router;
 
     beforeModel(model){
+        console.log(model);
         this.router.transitionTo('apples');
     }
 

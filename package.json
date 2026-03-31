@@ -12,6 +12,7 @@
   },
   "scripts": {
     "build": "ember build --environment=production",
+    "format-translations": "yaml-sort -w 120 -i translations/*.yaml && prettier -w translations/*.yaml",
     "lint": "npm-run-all --aggregate-output --continue-on-error --parallel lint:*",
     "lint:hbs": "ember-template-lint .",
     "lint:js": "eslint .",
@@ -20,9 +21,9 @@
     "test:ember": "ember test"
   },
   "devDependencies": {
-    "@ember/optional-features": "^2.0.0",
-    "@glimmer/component": "^1.0.4",
-    "@glimmer/tracking": "^1.0.4",
+    "@ember/optional-features": "^2.2.0",
+    "@glimmer/component": "^1.1.2",
+    "@glimmer/tracking": "^1.1.2",
     "babel-eslint": "^10.1.0",
     "broccoli-asset-rev": "^3.0.0",
     "ember-auto-import": "^2.0.0",
@@ -30,10 +31,9 @@
     "ember-cli-app-version": "^5.0.0",
     "ember-cli-babel": "^7.26.10",
     "ember-cli-dependency-checker": "^3.2.0",
-    "ember-cli-htmlbars": "^5.7.2",
+    "ember-cli-htmlbars": "^6.3.0",
     "ember-cli-inject-live-reload": "^2.1.0",
     "ember-cli-sri": "^2.1.1",
-    "ember-cli-uglify": "^3.0.0",
     "ember-data": "~3.28.13",
     "ember-export-application-global": "^2.0.1",
     "ember-fetch": "^8.0.1",
@@ -43,14 +43,16 @@
     "ember-qunit": "^5.1.5",
     "ember-resolver": "^8.0.3",
     "ember-source": "~3.28.10",
-    "ember-template-lint": "^3.15.0",
+    "ember-template-lint": "^7.9.3",
     "ember-welcome-page": "^4.0.0",
     "eslint": "^7.32.0",
     "eslint-plugin-ember": "^10.5.8",
     "eslint-plugin-node": "^11.1.0",
     "loader.js": "^4.7.0",
     "npm-run-all": "^4.1.5",
-    "qunit-dom": "^2.0.0"
+    "qunit-dom": "^2.0.0",
+    "yaml-sort": "^3.0.0",
+    "@lokalise/node-api": "^15.3.1"
   },
   "engines": {
     "node": "10.* || >= 12"
@@ -59,6 +61,5 @@
     "edition": "octane"
   },
   "dependencies": {
-    "@lokalise/node-api": "^14.8.0"
   }
 }

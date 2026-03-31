@@ -23,6 +23,6 @@ jobs:
         run: npm install @lokalise/node-api
 
       - name: Run test Node script
-        run: node public/lokalise-test-script.js
+        run: node public/lokalise-test-script.mjs
         env:
           LOKALISE_KEY: ${{ secrets.LOKALISE_KEY }}
