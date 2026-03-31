@@ -1,14 +1,15 @@
-curlyDrop: Ang {serviceName} ay kasalukuyang naisasakatuparan sa {realizationRate}%, kumpara sa {averageRate}% sa buong kumpanya.
-hello:
-  world: Kumusta mundo US!
+curlyDrop: 'Ang {serviceName} ay kasalukuyang naisasakatuparan sa {realizationRate}%, kumpara sa {averageRate}% sa buong kumpanya.'
 hello-only-from-us-file:
-  world: Tanging "Hello" mula sa US file. Lahat ng ibang rehiyon ay kailangang gamitin ito.
-newSinceAutoPull: Bago mula nang awtomatikong pagkuha
+  world: 'Tanging "Hello" mula sa US file. Lahat ng ibang rehiyon ay kailangang gamitin ito.'
+hello:
+  world: 'Kumusta mundo US!'
+newSinceAutoPull: 'Bago mula nang awtomatikong pagkuha'
 only-here: oo
-price_banner: Ang {product} ay nagkakahalaga ng {price, number}
-question: Tanong ba ito?
-quotesDouble: Ito ay \"double quotes\". \"{variable}\".
-quotesDoubleCurly: Ito ang "double curly quotes". "{variable}".
-quotesSingle: Ito ay mga 'single quotes'.
-thisOneDoesntCrash: Ang bayad ay iniayon ng {increase}% tungo sa {repricedAmount}.
-underscores: Kaya ano nga ba ang \_dealio\_ sa mga \_underscores\_?
+price_banner: 'Ang {product} ay nagkakahalaga ng {price, number}'
+question: 'Tanong ba ito?'
+quotesDouble: 'Ito ay \"double quotes\". \"{variable}\".'
+quotesDoubleCurly: 'Ito ang "double curly quotes". "{variable}".'
+quotesSingle: "Ito ay mga 'single quotes'."
+testing: isa
+thisOneDoesntCrash: 'Ang bayad ay iniayon ng {increase}% tungo sa {repricedAmount}.'
+underscores: 'Kaya ano nga ba ang \_dealio\_ sa mga \_underscores\_?'
