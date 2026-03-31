@@ -10,5 +10,6 @@ question: Tanong ba ito?
 quotesDouble: Ito ay \"double quotes\". \"{variable}\".
 quotesDoubleCurly: Ito ang "double curly quotes". "{variable}".
 quotesSingle: Ito ay mga 'single quotes'.
+testing: isa
 thisOneDoesntCrash: Ang bayad ay iniayon ng {increase}% tungo sa {repricedAmount}.
 underscores: Kaya ano nga ba ang \_dealio\_ sa mga \_underscores\_?

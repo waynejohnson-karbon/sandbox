@@ -10,5 +10,6 @@ question: Is this a question?
 quotesDouble: These are \"double quotes\". \"{variable}\".
 quotesDoubleCurly: These are "double curly quotes". "{variable}".
 quotesSingle: These are ‘single quotes’.
+testing: one
 thisOneDoesntCrash: The fee was adjusted by {increase}% to {repricedAmount}.
 underscores: So what is the \_dealio\_ with \_underscores\_?

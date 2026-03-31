@@ -12,5 +12,6 @@ question: Est-ce une question?
 quotesDouble: Ce sont des « guillemets ». \"{variable}\".
 quotesDoubleCurly: Ce sont des « guillemets français ». « {variable} ».
 quotesSingle: Ce sont des 'guillemets simples'.
+testing: un
 thisOneDoesntCrash: Les frais ont été ajustés de {increase}% à {repricedAmount}.
 underscores: Alors c'est quoi le \\_dealio\\_ avec les \\_ traits de soulignement\\_?
